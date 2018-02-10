@@ -1,0 +1,5 @@
+orginal queryy for selecting previous closed balance:
+=====================================================
+
+
+SELECT closed_balance FROM buy_existing where ID =  (select max(ID) from buy_existing where companyName='vasanth' AND dcdate < '2017-12-26' );

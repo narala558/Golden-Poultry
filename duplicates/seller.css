@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+.body{
+	margin: 0px;
+	padding: 0px;
+}
+.main-header{
+	background: teal;
+    height: 50px;
+}
+.main-header .navbar-custom-menu, .main-header .navbar-right{
+	    margin-right: 0px;
+    margin-top: -20px;
+    float: right;
+}
+.nav>li>a{
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.navbar-custom-menu>.navbar-nav>li{
+	position: relative;
+}
+.navbar-nav li{
+	margin-top: -22px;
+
+}
+.navbar-custom-menu>.navbar-nav>li>.dropdown-menu{
+	position: absolute;
+    right: 0;
+    left: auto;
+}
+.navbar-nav>.user-menu .user-image{
+	float: left;
+    width: 50px;
+    height: 49px;
+    border-radius: 50%;
+    margin-right: 6px;
+    margin-top: -17px;
+
+}
+.glyphicon-chevron-down{
+	font-size: 10px;
+    margin-left: 5px;
+    font-weight: normal !important;
+    color: #FFF;
+
+}
+.hidden-xs{
+	color: #FFF;
+}
+.logo-lg img{
+	width: 200px;
+	height: 150px:
+    margin-top: 7px;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background: teal;
+}
+.nav .next a{
+	    padding: 5px 15px;
+    margin-right: 10px;
+}
+.navbar{
+    position: relative;
+    min-height: 0px !important;
+    margin-bottom: 0px !important; 
+     border: none !important; 
+}
+.container {
+   margin-top: 15px;
+    margin-bottom: 20px;
+}
+.row{
+	margin: 10px !important;
+}
+.form-details ul{
+	list-style: none;
+	    padding-left: 0px !important;
+}
+.form-details ul li{
+	    margin: 15px 0;
+}
+.form-details ul li label{
+	width: 100px;
+}
+.form-details ul li label span{
+	color: red;
+}
+.form-details ul li input[type="text"]{
+	border: 1px solid #ccc;
+    height: 35px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+.form-details ul li input[type="email"]{
+	border: 1px solid #ccc;
+    height: 35px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+.form-details ul li textarea{
+	  overflow:hidden;
+	   padding-left: 6px;
+  width:60%;
+  font-size:14px;
+  resize: none;
+  height: 35px !important;
+  border-radius:3px
+}
+.form-details ul li div{
+	    float: right;
+    width: 65%;
+    border-bottom: 1px solid #ccc;
+    line-height: 24px;
+    padding-left: 6px;
+}

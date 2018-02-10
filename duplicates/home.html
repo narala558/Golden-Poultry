@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mobin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="seller.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+
+     <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+
+
+      <span class="logo-lg"><img src="logo.png"/></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Mobin<span class="glyphicon glyphicon-chevron-down"></span></span>
+            </a>
+          </li>
+         <!--  <li class="next"><a href="" class="btn btn-default">Next</a></li> -->
+
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid text-center">
+  	<div class="row">
+      <!--  <button type="button" class="btn btn-primary" onclick="showDetails()">buy</button>
+        <button type="button" class="btn btn-success" onclick="existingDeatlis()">sell</button>
+      <!--  <button type="button" class="btn btn-info" onclick="dailySheet()">Daily Sheet</button>
+        <button type="button" class="btn btn-danger">Weekly</button> -->
+      <ul class="nav navbar-nav">
+          <li class="next"><a href="buy.html" class="btn btn-default">buy</a></li>
+        <li class="next"><a href="sell.html" class="btn btn-default">sell</a></li>
+      </ul>
+    </div>
+  </div>
+
+<!--  <div class="container-fluid">S
+
+     initial Register Form -->
+
+  <!-- <div class="row">
+
+  <div class="col-md-4 form-details" id="details" style="display: none;">
+    <h3>Register Form</h3>
+<form action="insert.php" method="post">
+  <form name="RegisterForm">
+	<form action="insert.php" method="post">
+    <ul>
+      <li>
+      <label>Company Name<span>*</span></label>
+      <input type="text" name="cname" placeholder="Please  Enter Company name" required>
+
+       </li>
+
+       <li>
+       <label>Email <span>*</span></label>
+      <input type="email" name="email" placeholder="Please  Enter Email" required>
+      </li>
+
+
+
+      <li>
+       <label>Mobile <span>*</span></label>
+      <input type="number" name="mobile" placeholder="Please  Enter Mobile" required>
+      </li>
+
+	<li>
+       <label>Alt. Mobile</label>
+      <input type="number" name="altmobile" placeholder="Please  Enter Mobile" required>
+      </li>
+
+      <li>
+       <label>Address <span>*</span></label>
+      <textarea rows="1"  placeholder="Enter Address"></textarea>
+      </li>
+
+    </ul>
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+    </div>
+    </form>
+    </div>
+
+
+  exsiting user Details
+
+   <div class="col-md-4 form-details" id="userdetails" style="display: none;">
+
+      <h3>User Deatils</h3>
+  <form name="ReguisterForm">
+    <ul>
+      <li>
+       <label>Company Name <span>*</span></label>
+      <input type="text" name="cname" placeholder="Please  Enter Company name" required>
+      </li>
+
+
+      <li>
+
+      <label>DC date <span>*</span></label>
+      <input type="date" name="dcdate" placeholder="Please  Enter DC date" required>
+
+       </li>
+
+	</li>
+       <li>
+       <label>DC Number <span>*</span></label>
+      <input type="number" name="dcnum" placeholder="Please  Enter DC Num" required>
+
+      </li>
+
+
+
+	<li>
+       <label>vehicle No. <span>*</span></label>
+
+      <input type="text" name="vehicleno" placeholder="Please  Enter Vehicle No" required>
+      </li>
+
+
+	<li>
+       <label>vehicle No. <span>*</span></label>
+      <input type="text" name="vehicleno" placeholder="Please  Enter Vehicle No" required>
+
+      </li>
+
+	<li>
+       <label>Driver Name <span>*</span></label>
+      <input type="text" name="Dname" placeholder="Please  Enter Driver Name" required>
+      </li>
+
+
+	<li>
+       <label>Farmer Name <span>*</span></label>
+      <input type="text" name="farmername" placeholder="Please  Enter farmername" required>
+
+      </li>
+
+
+	<li>
+
+       <label>Address of farmer<span>*</span></label>
+      <input type="text" name="Addfar" placeholder="Please  Enter Address" required>
+      </li>
+
+	<li>
+       <label>Number of Cages<span>*</span></label>
+      <input type="varchar" name="nocages" placeholder="Please  Enter No of Cages" required>
+      </li>
+
+	<li>
+       <label>Number of Birds<span>*</span></label>
+      <input type="varchar" name="nobirds" placeholder="Please  Enter no of Birds" required>
+
+      </li>
+
+	<li>
+       <label>Total Weight<span>*</span></label>
+      <input type="varchar" name="tweight" placeholder="Please  Enter Total Weight" required>
+
+      </li>
+
+	<li>
+       <label>Avg Weight<span>*</span></label>
+      <input type="varchar" name="avgweight" placeholder="Please  Enter Average Weight" required>
+
+      </li>
+
+
+	<li>
+       <label>Rate</label>
+      <input type="number" name="rate" placeholder="Please  Enter Rate" required>
+      </li>
+
+
+
+	<li>
+
+       <label>Total Amount</label>
+      <input type="number" name="tamount" placeholder="Please  Enter total Amount" required>
+
+      </li>
+
+    </ul>
+
+	<div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+    </div>
+    </form>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="container-fluid">
+
+     Daily Sheet
+
+  <div class="row">
+
+  <div class="col-md-4 form-details" id="details" style="display: none;">
+    <h3>Daily Sheet</h3>
+  <form name="Daily Sheet">
+    <ul>
+      <li>
+      <label>Company Name<span>*</span></label>
+      <input type="text" name="cname" placeholder="Please  Enter Company name" required>
+       </li>
+
+	<li>
+      <label>Date<span>*</span></label>
+      <input type="date" name="ddate" placeholder="Please  Enter date" required>
+       </li>
+
+
+
+</ul>
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+    </div>
+    </form>
+    </div>
+
+<script type="text/javascript">
+
+
+   function showDetails() {
+    var x = document.getElementById("details");
+    var y = document.getElementById("userdetails");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.style.display = "none";
+
+
+    } else {
+        x.style.display = "none";
+         y.style.display = "block";
+
+    }
+}
+
+
+  function existingDeatlis() {
+    var x = document.getElementById("userdetails");
+    var y = document.getElementById("details");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.style.display = "none";
+
+    } else {
+        x.style.display = "none";
+         y.style.display = "block";
+
+    }
+}
+
+function dailySheet() {
+    var x = document.getElementById("myDate");
+    var y = document.getElementById("input");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.style.display = "none";
+
+    } else {
+        x.style.display = "none";
+         y.style.display = "block";
+
+    }
+}
+
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
+
+</script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js">
+        </script>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/seller.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+ <!--<meta http-equiv="refresh" content="30"> -->
+</head>
+<body>
+<header class="main-header">
+<!-- Logo -->
+	<a href="#" class="logo">
+	<span class="logo-lg">
+<img src="images/logo.jpg" alt style="width: 70px; height:50px" />
+ </span>
+	</a>
+    <!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top">
+	<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+	<span class="sr-only">Toggle navigation</span>
+	</a>
+<h1>Golden Poultry</h1>
+<div class="navbar-custom-menu" style="margin-top: -45px;">
+	<ul class="nav navbar-nav">
+		<li class="next"><a href="#" onClick="parent.location='buy.html'" class="active">Buy</a></li>
+
+            <li class="next"><a href="#" onClick="parent.location='sell.html'">Sell</a></li>
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/user.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Mobin</span>
+            </a>
+          </li>
+         <li class="next"><a href="index.html">Log Out</a></li>
+          
+        
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<div class="container-fluid text-center" style="height: 50px !important;">
+	<div class="row">
+        <div class="col-md-6">
+        <button type="button" class="btn btn-primary" onclick="showDetails()">Register</button>
+        <button type="button" class="btn btn-success" onclick="existingDetails()">Existing User</button>
+        <button type="button" class="btn btn-info" onclick="dailySheet()">Daily Sheet</button>
+        <button type="button" class="btn btn-danger" onclick="weeklySheet()">Weekly</button>
+	<button type="button" class="btn btn-warning" onclick="modifyAmount()">Paid Amount</button>
+	<button type="button" class="btn btn-primary" onclick="Bills()">Bill</button>
+	</div>
+	<div class="col-md-6"><marquee><h2 style="margin-top: 7px !important;margin-bottom: 7px !important">BUY PAGE</h2></marquee></div>
+    	</div>
+    	</div>
+</div>
+<div class="container-fluid">
+
+				<!-- initial Register Form -->
+
+<div class="row">
+	<div class="col-md-4 form-details" id="form1" style="display: none;">
+		<h3>Register Form</h3>
+	<form action="buy_register.php" method="post">
+	<form name="RegisterForm">
+<ul>
+	<li>
+		<label>Company Name<span>*</span></label>
+		<input type="text" name="companyName" placeholder="Please  Enter Company name" required>
+	</li>
+       
+	<li>
+		<label>Email <span>*</span></label>
+		<input type="email" name="eMail" placeholder="Please  Enter Email" required>
+	</li>
+	
+	<li>
+		<label>Mobile <span>*</span></label>
+		<input type="number" name="mobileNum" placeholder="Please  Enter Mobile" minlength:10 maxlength:10 required>
+	</li>
+
+	<li>
+		<label>Alt. Mobile <span>*</span></label>
+		<input type="number" name="altMobNum" placeholder="Please  Enter Mobile" required>
+        </li>
+      
+	<li>
+		<label>Address <span>*</span></label>
+		<textarea rows="1" name="address"  placeholder="Enter Address"></textarea>
+	</li>
+      
+</ul>
+<div class="text-center">
+	
+        
+	<button type="submit" class="btn btn-success">Submit</button>
+	<button type="reset" class="btn btn-danger">Cancel</button>
+
+
+</div>
+    </form>
+</div>
+
+
+	
+
+                             <!--  exsiting user Details   -->
+<div class="rows" id="form2" style="display: none;">
+	<h3>User Deatils</h3>
+	<form action="buy_exsiting.php" method="post">
+	<form name="ReguisterForm">
+<div class="col-md-6 form-details">
+<ul>
+	<li>
+		<label>Company Name <span>*</span></label>
+		<input type="text" name="companyName" placeholder="Please  Enter Company name" required>
+	</li>
+
+	<li>
+		<label>DC date <span>*</span></label>
+		<input type="date" format="YYYY-MM-DD" name="dcdate" placeholder="Please  Enter DC date" required>
+	</li>
+       
+	<li>
+		<label>DC Number <span>*</span></label>
+		<input type="number" name="dcnum" placeholder="Please  Enter DC Num" required>
+	</li>
+    
+	<li>
+		<label>Vehicle No. <span>*</span></label>
+		<input type="text" name="vehicle_no" placeholder="Please  Enter Vehicle No" required>
+	</li>
+
+	<li>
+		<label>Driver Name <span>*</span></label>
+		<input type="text" name="driver_name" placeholder="Please  Enter Driver Name" required>
+	</li>
+
+	<li>
+		<label>Farmer Name <span>*</span></label>
+		<input type="text" name="farmer_name" placeholder="Please  Enter farmername" required>
+	</li>
+</ul>
+</div>
+
+<div class="col-md-6 form-details">
+  <ul>
+  	<li>
+		<label>Address of farmer<span>*</span></label>
+		<input type="text" name="farmer_address" placeholder="Please  Enter Address" required>
+	</li>
+	<li>
+       <label>Number of Cages</label>
+      <input type="number" step="any" name="no_cages" placeholder="Please  Enter No of Cages">
+      </li>
+
+	<li>
+       <label>Number of Birds</label>
+      <input type="number" step="any" name="no_birds" placeholder="Please  Enter no of Birds">
+
+      </li>
+
+	<li>
+		<label>Total Weight<span>*</span></label>
+		<input type="number" step="any" name="total_weight" placeholder="Please  Enter Total Weight" required>
+	</li>
+
+	<li>
+		<label>Rate<span>*</span></label>
+		<input type="number" step="any" name="rate" placeholder="Please  Enter Rate" required>
+	</li>
+	<li>
+		<label>Total Amount</label>
+		<input type="number" step="any" name="amount" placeholder="Please  Enter total Amount" disabled>
+	</li>
+</ul>
+</div>
+	
+<div class="text-center col-md-4 col-md-offset-4"">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+</div>
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+</form>
+</form>
+</div>
+
+<div class="container-fluid">
+
+						<!-- Daily Sheet -->
+
+<div class="col-md-4 form-details" id="form3" style="display: none;">
+
+	<h3>Daily Sheet</h3>
+
+	<form action="buy_daily.php" method="post">
+	<form name="Daily Form">
+
+    <ul>
+      <li>
+      <label>Company Name</label>
+      <input type="text"  name="companyName" placeholder="Please  Enter Company name" >
+       </li>
+
+      <li>
+      <label>Date</label>
+      <input type="date" name="dcdate" placeholder="Please  Enter date">
+       </li>
+    </ul>
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+    </div>
+    </form>
+  </div>
+<!--</div>
+
+<div class="container-fluid">
+					
+					<!-- weekly sheet -->
+
+  <div class="col-md-4 form-details" id="form4" style="display: none;">
+    <!--<div class="col-md-4 form-details" id="toDate" style="display: none;">-->
+    <h3>weeklySheet</h3>
+	<form action="buy_weekly.php" method="post">
+    <form name="Weekly Form">
+
+      <ul>
+       <li>
+          <label>Company Name</label>
+          <input type="text" name="companyName" placeholder="Please  Enter Company name" >
+       </li>  
+	
+       <li>
+         <label>From Date</label>
+         <input type="date" name="fromDate" placeholder="Please  Enter date" >
+       </li>
+
+       <li>
+         <label>To Date</label>
+         <input type="date" name="toDate" placeholder="Please  Enter date" >
+       </li>
+     </ul>
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+    </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+					<!-- Paid Amount -->
+
+<div class="col-md-4 form-details" id="form5" style="display: none;">
+<h3>Paid Amount</h3>
+<form action="buy_amount.php" method="post">
+<form name="Paid Amount">
+
+    <ul>
+      <li>
+      <label>Company Name<span>*</span></label>
+      <input type="text" name="companyName" placeholder="Please  Enter Company name" required>
+       </li>
+
+      <li>
+      <label>Date<span>*</span></label>
+      <input type="date" name="dcdate" placeholder="Please  Enter date" required>
+       </li>
+
+	 <li>
+      <label>Paid Amount<span>*</span></label>
+      <input type="number" step="any" name="paid_amount" placeholder="Please enter amount" required>
+       </li>
+	
+	<li>
+      <label>Cash paid By<span>*</span></label>
+      <input type="text" name="cash_paid_by" placeholder="Please  Enter Cash Paid By" required>
+       </li>
+
+
+
+    </ul>
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+    </div>
+    </form>
+  </div>
+
+
+
+
+						<!-- Bills sheet -->
+
+  <div class="col-md-4 form-details" id="form6" style="display: none;">
+    <!--<div class="col-md-4 form-details" id="toDate" style="display: none;">-->
+    <h3>Bills</h3>
+	<form action="buy_bill.php" method="post">
+    <form name="Bills Form">
+
+      <ul>  
+	
+       <li>
+         <label>From Date</label>
+         <input type="date" name="fromDate" placeholder="Please  Enter date" >
+       </li>
+
+       <li>
+         <label>To Date</label>
+         <input type="date" name="toDate" placeholder="Please  Enter date" >
+       </li>
+     </ul>
+
+    <div class="text-center">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+<script>
+function myFunction() {
+    location.reload();
+}
+</script>
+    </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+<!-- footer section --> 
+
+<footer class="footer">
+  <strong>Copyright &copy; 2017-2018 <a href="mailto:someone@example.com">someone@example.com</a>.</strong> All rights
+    reserved.
+  <p>Posted by: Hege Refsnes</p>
+</footer>
+
+<!-- footer section  --> 
+
+<script type="text/javascript">
+function showDetails()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+	
+
+	if(w.style.display === "none")
+	{
+		w.style.display = "block";
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "none";
+		a.style.display = "none";
+		b.style.display = "none";
+	}
+}
+function existingDetails()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+
+	if(x.style.display === "none")
+	{
+		w.style.display = "none";
+		x.style.display = "block";
+		y.style.display = "none";
+		z.style.display = "none";
+		a.style.display = "none";
+		b.style.display = "none";
+	}
+}
+function dailySheet()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+
+	if(y.style.display === "none")
+	{
+		w.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "block";
+		z.style.display = "none";
+		a.style.display = "none";
+		b.style.display = "none";
+	}
+}
+function weeklySheet()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+
+	if(z.style.display === "none")
+	{
+		w.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "block";
+		a.style.display = "none";
+		b.style.display = "none";
+	}
+}
+
+function modifyAmount()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+
+	if(a.style.display === "none")
+	{
+		w.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "none";
+		a.style.display = "block";
+		b.style.display = "none";
+	}
+}
+
+function Bills()
+{
+	var w = document.getElementById("form1");
+	var x = document.getElementById("form2");
+	var y = document.getElementById("form3");
+	var z = document.getElementById("form4");
+	var a = document.getElementById("form5");
+	var b = document.getElementById("form6");
+
+	if(b.style.display === "none")
+	{
+		w.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "none";
+		z.style.display = "none";
+		a.style.display = "none";
+		b.style.display = "block";
+	}
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h4 align="right" >
+<br> </br>
+
+
+<!-- <input type=button class="btn btn-danger" onClick="parent.location='sell.html'" value='sell'style="margin-left: 596px;"> -->
+
+
+</h4>
+
+<SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+</SCRIPT>
+
+<BODY onload="noBack();" 
+	onpageshow="if (event.persisted) noBack();" onunload="">
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });
+</script>
+</html>

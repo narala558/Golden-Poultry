@@ -1,0 +1,98 @@
+
+
+    <!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <title>Add Record Form</title>
+
+    </head>
+
+    <body>
+
+    <form action="insert.php" method="post">
+
+
+
+
+
+
+
+<!--
+
+
+
+        <p>
+
+            <label for="firstName">First Name:</label>
+
+            <input type="text" name="first_name" id="firstName">
+
+        </p>
+
+        <p>
+
+            <label for="lastName">Last Name:</label>
+
+            <input type="text" name="last_name" id="lastName">
+
+        </p>
+
+        <p>
+
+            <label for="emailAddress">Email Address:</label>
+
+            <input type="text" name="email" id="emailAddress">
+
+        </p>
+
+
+
+
+-->
+  <form name="RegisterForm">
+	
+    <ul>
+      <li>
+      <label>Company Name<span>*</span></label>
+      <input type="text" name="cname" placeholder="Please  Enter Company name" required>
+      </li>
+       
+       <li>
+       <label>Email <span>*</span></label>
+       <input type="email" name="email" placeholder="Please  Enter Email" required>
+       </li>
+	
+
+
+      <li>
+      <label>Mobile <span>*</span></label>
+      <input type="number" name="mobile" placeholder="Please  Enter Mobile" required>
+      </li>
+
+	<li>
+        <label>Alt. Mobile</label>
+        <input type="number" name="altmobile" placeholder="Please  Enter Mobile" required>
+        </li>
+      
+      <li>
+      <label>Address <span>*</span></label>
+      <textarea rows="1" name="address" placeholder="Enter Address"></textarea>
+      </li>
+      
+    </ul>
+
+
+    <input type="submit" value="Submit">
+
+    </form>
+
+    </body>
+
+    </html>
+
+

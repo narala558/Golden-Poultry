@@ -1,0 +1,12 @@
+<?php
+mysql_connect("localhost", "root", "Ammanana") or die("Connection Failed");
+mysql_select_db("sample")or die("Connection Failed");
+$name = $_POST['name'];
+$query = "select * from sample where name = '$name'";
+$result = mysql_query($query);
+while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+echo $line['name'];
+echo $line['age'];
+echo "<br>\n";
+}
+?>

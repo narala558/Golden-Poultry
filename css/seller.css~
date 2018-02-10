@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+.body{
+	margin: 0px;
+	padding: 0px;
+    background-color:#fff;
+}
+.main-header{
+	background: teal;
+    height: 50px;
+}
+
+.main-header .navbar-custom-menu, .main-header .navbar-right{
+	     margin-right: 0px;
+    margin-top: 6px;
+    float: right;
+}
+.main-header h1{
+    text-align: center;
+    line-height: 0px;
+       margin: -25px 0;
+    font-weight: 500 !important;
+    font-size: 28px;
+    color: #fff;
+}
+.nav>li>a{
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.navbar-custom-menu>.navbar-nav>li{
+	position: relative;
+}
+.navbar-nav li{
+
+}
+.navbar-custom-menu>.navbar-nav>li>.dropdown-menu{
+	position: absolute;
+    right: 0;
+    left: auto;
+}
+.navbar-nav>.user-menu .user-image{
+	float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 6px;
+    margin-top: -11px;
+
+}
+.glyphicon-chevron-down{
+	font-size: 10px;
+    margin-left: 5px;
+    font-weight: normal !important;
+    color: #FFF;
+
+}
+.hidden-xs{
+	color: #FFF;
+}
+.logo-lg img{
+	width: 200px;
+	height: 150px:
+    margin-top: 7px;
+}
+.active{
+    background: None !important;
+    border-bottom: 3px solid #ecce4f;
+    line-height: 23px !important
+}
+
+.active.nav>li>a:focus, .nav>li>a:hover{
+	background: None !important;
+    border-bottom: 3px solid #ecce4f;
+    line-height: 23px;
+}
+.nav .next a{
+	    padding: 10px 15px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.navbar{
+    position: relative;
+    min-height: 0px !important;
+    margin-bottom: 0px !important; 
+     border: none !important; 
+}
+.container {
+   margin-top: 15px;
+    margin-bottom: 20px;
+}
+.back-center{
+    margin-bottom: 0px !important;
+    padding-bottom: 15px !important;
+}
+.back-center img{
+  width: 100%;
+  
+}
+.row{
+	margin: 10px !important;
+}
+.form-details ul{
+	list-style: none;
+	    padding-left: 0px !important;
+}
+.form-details ul li{
+	    margin: 15px 0;
+}
+.form-details ul li label{
+	width: 130px;
+}
+.form-details ul li label span{
+	color: red;
+}
+.form-details ul li input[type="text"]{
+	border: 1px solid #ccc;
+    height: 37px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+.form-details ul li input[type="number"]{
+    border: 1px solid #ccc;
+    height: 35px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.form-details ul li input[type="date"]{
+    border: 1px solid #ccc;
+    height: 35px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.form-details ul li input[type="email"]{
+	border: 1px solid #ccc;
+    height: 35px;
+    padding-left: 6px;
+    width: 60%;
+    border-radius: 3px;
+}
+.form-details ul li textarea{
+	  overflow:hidden;
+	   padding-left: 6px;
+  width:60%;
+  font-size:14px;
+  resize: none;
+  height: 35px !important;
+  border-radius:3px
+}
+.popup{
+position: middle;
+left: 50%;
+width:;
+height:50px;
+right:50%;
+margin: auto;
+}
+.form-details ul li div{
+	    float: right;
+    width: 65%;
+    border-bottom: 1px solid #ccc;
+    line-height: 24px;
+    padding-left: 6px;
+}
+.footer {
+    border-top: 1px solid #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #888;
+    text-align: left;
+    height: 40px;
+    padding:6px;
+}
+.footer p{
+    float: right;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+/* Set a style for all buttons */
+.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+        width: 100%;
+    border-radius: 3px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 12%;
+    border-radius: 50%;
+}
+
+.container {
+  /*  padding: 16px;*/
+  width: 100%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+   margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 35%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+grid-framework.less:48 @(min-width: 992px) .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{
+float: left;
+ margin-left: 452px;
+}
+@mediaquries(min-width: 768px)
+{ 
+float: left;
+margin-left: 452px;
+ 
+}
+@mediaquries (max-width:767px) {
+    .portfolio {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
